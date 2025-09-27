@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jor.consola.exceptions.NoSuchConsolaException;
 import com.jor.consola.model.Consola;
 import com.jor.consola.repository.ConsolaRepository;
 import com.jor.consola.service.IConsolaService;
 
+@Service
 public class ConsolaServiceImpl implements IConsolaService {
 
 	@Autowired

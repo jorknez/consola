@@ -1,11 +1,8 @@
 package com.jor.consola.model;
 
-import org.springframework.data.annotation.Id;
-
+import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.SequenceGenerator;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -17,18 +14,14 @@ import lombok.Setter;
 @Setter
 public class Consola {
 	
-	@Id
-    @Column(nullable = false, updatable = false)
     @SequenceGenerator(
             name = "primary_sequence",
             sequenceName = "primary_sequence",
             allocationSize = 1,
             initialValue = 10000
     )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "primary_sequence"
-    )
+    @Column(nullable = false, updatable = false)
+    @Id
 	private Long id;
 	
 	@Column(nullable = false, unique = false)

@@ -5,7 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.jor.consola.model.Consola;
 
-@Repository 
-public interface ConsolaRepository extends JpaRepository<Consola, Long> {
+@Repository
+public interface ConsolaRepository extends JpaRepository<Consola, Long> 
+{
 
 }
